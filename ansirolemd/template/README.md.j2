@@ -1,0 +1,28 @@
+# {{ role_name }}
+{% if role_description is defined %}
+{{ role_description }}
+{% else %}
+"Please fill description"
+{% endif %}
+
+## Example
+```yaml
+---
+- hosts: all
+  become: true
+
+  roles:
+      - role: {{ role_name }}
+        tags: [{{ role_name }}]
+
+```
+{% if platform_table is defined  %}
+## Support Platforms
+{{ platform_table }}
+{% endif %}
+
+{% if variable_table is defined  %}
+## Variables
+{{ variable_table }}
+{% endif %}
+
