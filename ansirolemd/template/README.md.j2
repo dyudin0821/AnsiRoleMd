@@ -16,13 +16,20 @@
         tags: [{{ role_name }}]
 
 ```
+___
+
 {% if platform_table is defined  %}
 ## Support Platforms
+This role supports the following list of operating systems
+
 {{ platform_table }}
 {% endif %}
 
-{% if variable_table is defined  %}
+___
+
+{% if variable_table is defined  %}  
 ## Variables
+List of variables used in the role  
 {{ variable_table }}
 {% endif %}
 

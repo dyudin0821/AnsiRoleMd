@@ -1,15 +1,13 @@
+#!/usr/bin/env python3
 from setuptools import setup
 
-with open('requirements.txt') as f:
-    required = f.read().splitlines()
 
 setup(name='ansirolemd',
-      version='0.1',
+      version='0.1.0',
       description='Script to generate md  Ansible role',
-      url='https://github.com/dyudin0821/AnsiRoleMd',
-      author='dyudin0821',
-      author_email='denistu2191@gmail.com',
-      license='MIT',
+      author='Denis Yudin',
+      author_email='dyudin@intermedia.com',
+      license='Apache License 2.0',
       packages=['ansirolemd'],
-      install_requires=required,
-      zip_safe=False)
+      install_requires=open('requirements.txt').readlines(),
+    )
